@@ -1,0 +1,178 @@
+
+:root {
+    --color-dark: #2D3651;      
+    --color-accent: #1F7A8C;    
+    --color-light: #FFFFFF;     
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.intro-block {
+
+    background-image: url('../images/travel-main.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-light);
+
+    position: relative;
+}
+
+.intro-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.intro-content {
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.intro-heading {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--color-accent); 
+    color: var(--color-light);
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #165e6d; 
+    border-color: #165e6d;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-light);
+    border: 2px solid var(--color-light);
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.gallery-title {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--color-dark);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    padding: 15px;
+    color: var(--color-light);
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 8px;
+    overflow: hidden;
+    text-shadow: 0 0 5px var(--color-dark), 0 0 10px rgba(0,0,0,0.8); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item.item-1 {
+    background-image: url('../images/europe.jpg');
+}
+.gallery-item.item-2 {
+    background-image: url('../images/asia.jpg');
+}
+.gallery-item.item-3 {
+    background-image: url('../images/america.jpg');
+}
+.gallery-item.item-4 {
+    background-image: url('../images/exotic.jpg');
+}
+.gallery-item.item-5 {
+    background-image: url('../images/beach.jpg');
+}
+.gallery-item.item-6 {
+    background-image: url('../images/mountains.jpg');
+}
+.gallery-item.item-7 {
+    background-image: url('../images/hotels.jpg');
+}
+.gallery-item.item-8 {
+    background-image: url('../images/flights.jpg');
+}
+.gallery-item.item-9 {
+    background-image: url('../images/car-rent.jpg');
+}
+
+/* Футер */
+.dark-bg {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-block p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
